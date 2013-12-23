@@ -3,10 +3,39 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="underscore.js"></script>
 <script type="text/javascript" src="svg-to-wkt.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-<textarea width=100 name="input" id="input"></textarea>
-<button type="button" onclick="$('#output').val(SVGtoWKT.convert($('#input').val()))">Try it</button>
-<textarea width=100 name="output" id="output"></textarea>
+<div class="jumbotron">
+	<div class="container">
+             <h1>SVG to WKT convertor</h1>
+             <h3>Brought to you by <a href="http://linfiniti.com">Linfiniti Consulting CC.</a><h3>
+             <h5>Built using the excellent <a href="https://github.com/davidmcclure/svg-to-wkt">svg-to-wkt javascript libary by David McClure.</a><h5>
+             
+	</div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Paste the svg content here</div>
+        <div class="panel-content">
+        	<textarea style="width:100%; height: 300px; border: 0px;" width=100 name="input" id="input"></textarea>
+        </div>
+    </div>
+    <div style="padding-bottom: 20px; text-align: center;">
+	<button class="btn btn-primary" type="button" onclick="$('#output').val(SVGtoWKT.convert($('#input').val()))">Do it!</button>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">WKT Output</div>
+        <div class="panel-content">
+		<textarea style="width:100%; height: 300px; border: 0px;" width=100 name="output" id="output"></textarea>
+        </div>
+    </div>
+</div>
 </body>
 </html>
