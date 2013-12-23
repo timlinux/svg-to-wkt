@@ -1,0 +1,12 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="underscore.js"></script>
+<script type="text/javascript" src="svg-to-wkt.js"></script>
+</head>
+<body>
+<textarea width=100 name="input" id="input"></textarea>
+<button type="button" onclick="$('#output').val(SVGtoWKT.convert($('#input').val()))">Try it</button>
+<textarea width=100 name="output" id="output"></textarea>
+</body>
+</html>
